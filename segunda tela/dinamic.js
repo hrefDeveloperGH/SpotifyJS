@@ -49,8 +49,8 @@ const musicBiblioteca = [
 let songsPlaylist = [...musicBiblioteca]
 
 const pageBody = document.getElementById('corpinho');
-const pesquisar = document.getElementById('search-dcria');
-const buttonSearch = document.getElementById('search-button');
+const searchTerm = document.getElementById('search-term');
+const searchBt = document.getElementById('search-button');
 
 
 function loadBiblioteca(){
@@ -75,10 +75,10 @@ function loadBiblioteca(){
 }
 
 function searchClick(){
-    console.log(pesquisar.value);
+    console.log(searchTerm.value);
 }
 
-buttonSearch.addEventListener('click', searchClick);
+searchBt.addEventListener('click', searchClick);
 
 
 loadBiblioteca();
