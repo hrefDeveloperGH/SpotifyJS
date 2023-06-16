@@ -23,28 +23,45 @@
               placeholder="Song"
                aria-label="Username"
                 aria-describedby="basic-addon1">
-                <button type="button" class="btn btn-outline-success"><i class="bi bi-search"></i></button>      
+                <button
+                id="search-button"
+                type="button" 
+                class="btn btn-outline-success">
+                <i class="bi bi-search"></i>
+              </button>      
           </div>
-          <button id="search-button" type="button" class="btn btn-outline-success mx-2" >Playlist <i class="bi bi-music-note-list"></i></button>  
+          <button 
+          type="button" 
+          class="btn btn-outline-success mx-2"
+          data-bs-toggle="modal" 
+          data-bs-target="#staticBackdrop"
+          >
+          Playlist <i class="bi bi-music-note-list "></i></button>  
         </div>
 
     
     <div id="corpinho" class="bg-secondary flex-grow-1 d-flex flex-wrap justify-content-center gap-2">
-        <div class="card d-flex flex-column align-items-center" 
-        style="width: 18rem; height: 30rem;"
-        >
-            <img src="covers/ugliest.jpg"
-             class="card-img-top" 
-             alt="Disc Cover"
-             />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Name Music</h5>
-              <p class="card-text">Name Artista</p>
-              <p class="card-text">Name Album</p>
-              <button class="btn btn-outline-success"><i class="bi bi-play-circle"></i></button>
-            </div>
-          </div>
     </div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Playlist</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div id="playlist" class="modal-body">
+        <p class="d-flex justify-content-between border-top border-bottom align-items-center">
+          Ainda cria
+          <button class="btn btn-outline-danger">
+            <i class="bi bi-trash"></i>
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- <div id="rodapenis" class="bg-secondary-subtle">Rodapé</div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
