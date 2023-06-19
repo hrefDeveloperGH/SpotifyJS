@@ -61,7 +61,7 @@ let isPlaying = false;
 let isShuffled = false;
 let isLooping = false;
 
-const originalPlaylist =  JSON.parse(localStorage.getItem('playlisty')) ?? [snowUkulele, opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,];
+const originalPlaylist =  JSON.parse(localStorage.getItem('playlist')) ?? [opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
@@ -91,10 +91,10 @@ function playDecisao(){
 }
 
 function loadingSong(){
-    cover.src = `covers/${sortedPlaylist[index].File}.jpg`;
+    cover.src = `/covers/${sortedPlaylist[index].File}.jpg`;
     namemusic.innerText = sortedPlaylist[index].namemusic;
     artista.innerText = sortedPlaylist[index].artista;
-    song.src = `songs/${sortedPlaylist[index].File}.mp3`;
+    song.src = `/songs/${sortedPlaylist[index].File}.mp3`;
     likeButtonRender();
 }
 
@@ -216,7 +216,7 @@ function likeButtonClicked(){
         sortedPlaylist[index].liked = false;
     }
     likeButtonRender();
-    localStorage.setItem('playlisty', 
+    localStorage.setItem('playlist', 
     JSON.stringify(originalPlaylist)
     );
 }
