@@ -1,5 +1,5 @@
 const cover = document.getElementById('thumb');
-const namemusic = document.getElementById('songname');
+const songName = document.getElementById('songname');
 const artista = document.getElementById('cantor');
 const song = document.getElementById('som');
 const play = document.getElementById('play');
@@ -14,44 +14,37 @@ const loop = document.getElementById('repeat');
 const songTime = document.getElementById('song-time');
 const totalTime = document.getElementById('total-time');
 
-const snowUkulele = {
-    namemusic : 'i wrote this song 4 u',
-    artista : 'Snow',
-    File : 'snow_linda',
-    liked : false,
-};
-
 
 const opium = {
-    namemusic : 'if looks could kill',
+    songName : 'if looks could kill',
     artista : 'Destroy Lonely',
     File : 'opium_friday',
     liked : false,
 };
 
 const ugliest = {
-    namemusic : 'Ugliest',
+    songName : 'Ugliest',
     artista : '$UICIDEBOY$',
     File : 'ugliest',
     liked : false,
 };
 
 const ghostKilla = {
-    namemusic : 'GHOSTKILLA',
+    songName : 'GHOSTKILLA',
     artista : '1nonly',
     File : 'ghost_Killa',
     liked : false,
 };
 
 const corsaFreestyle = {
-    namemusic : 'Corsa Freestyle',
+    songName : 'Corsa Freestyle',
     artista : 'Ryu, the Runner',
     File : 'corsa_Freestyle',
     liked : false,
 };
 
 const sempreTravado = {
-    namemusic : 'SEMPRE TRAVADO',
+    songName : 'SEMPRE TRAVADO',
     artista : 'DEREK',
     File : 'sempre_travado',
     liked : false,
@@ -91,10 +84,10 @@ function playDecisao(){
 }
 
 function loadingSong(){
-    cover.src = `/covers/${sortedPlaylist[index].File}.jpg`;
-    namemusic.innerText = sortedPlaylist[index].namemusic;
+    cover.src = `covers/covers${sortedPlaylist[index].coverFile}`;
+    songName.innerText = sortedPlaylist[index].songName;
     artista.innerText = sortedPlaylist[index].artista;
-    song.src = `/songs/${sortedPlaylist[index].File}.mp3`;
+    song.src = `songs/${sortedPlaylist[index].songFile}`;
     likeButtonRender();
 }
 
@@ -220,6 +213,7 @@ function likeButtonClicked(){
     JSON.stringify(originalPlaylist)
     );
 }
+
 
 loadingSong();
 play.addEventListener('click', playDecisao);

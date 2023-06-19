@@ -153,7 +153,7 @@ function updateLocalStorage(){
 }
 
 function startPlayer(){
-    location.href = 'SPOTIFY INSANE'
+    location.href = '/interface/player'
 }
 
 searchBt.addEventListener('click', searchClick);
