@@ -18,35 +18,35 @@ const totalTime = document.getElementById('total-time');
 const opium = {
     songName : 'if looks could kill',
     artista : 'Destroy Lonely',
-    File : 'opium_friday',
+    File : 'opium_friday.jpg',
     liked : false,
 };
 
 const ugliest = {
     songName : 'Ugliest',
     artista : '$UICIDEBOY$',
-    File : 'ugliest',
+    File : 'ugliest.jpg',
     liked : false,
 };
 
 const ghostKilla = {
     songName : 'GHOSTKILLA',
     artista : '1nonly',
-    File : 'ghost_Killa',
+    File : 'ghost_killa.jpg',
     liked : false,
 };
 
 const corsaFreestyle = {
     songName : 'Corsa Freestyle',
     artista : 'Ryu, the Runner',
-    File : 'corsa_Freestyle',
+    File : 'corsa_freestyle.jpg',
     liked : false,
 };
 
 const sempreTravado = {
     songName : 'SEMPRE TRAVADO',
     artista : 'DEREK',
-    File : 'sempre_travado',
+    File : 'sempre_travado.jpg',
     liked : false,
 };
 
@@ -84,10 +84,10 @@ function playDecisao(){
 }
 
 function loadingSong(){
-    cover.src = `covers/covers${sortedPlaylist[index].coverFile}`;
+    cover.src = `/interface/covers/${sortedPlaylist[index].coverFile}`;
     songName.innerText = sortedPlaylist[index].songName;
     artista.innerText = sortedPlaylist[index].artista;
-    song.src = `songs/${sortedPlaylist[index].songFile}`;
+    song.src = `/interface/songs/${sortedPlaylist[index].songFile}`;
     likeButtonRender();
 }
 
