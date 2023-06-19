@@ -19,7 +19,7 @@ const ghostKilla = {
     songName : 'GHOSTKILLA',
     artista : '1nonly', 
     album : 'single',
-    coverFile : 'ghost_Killa.jpg',
+    coverFile : 'ghost_killa.jpg',
 };
 
 const corsaFreestyle = {
@@ -27,7 +27,7 @@ const corsaFreestyle = {
     songName : 'Corsa Freestyle',
     artista : 'Ryu, the Runner',
     album : 'Essa é a Vida de um Corredor',
-    coverFile : 'corsa_Freestyle.jpg',
+    coverFile : 'corsa_freestyle.jpg',
 };
 
 const sempreTravado = {

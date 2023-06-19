@@ -91,7 +91,7 @@ function playDecisao(){
 }
 
 function loadingSong(){
-    cover.src = `capas/${sortedPlaylist[index].File}.jpg`;
+    cover.src = `covers/${sortedPlaylist[index].File}.jpg`;
     namemusic.innerText = sortedPlaylist[index].namemusic;
     artista.innerText = sortedPlaylist[index].artista;
     song.src = `songs/${sortedPlaylist[index].File}.mp3`;
