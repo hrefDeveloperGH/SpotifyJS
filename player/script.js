@@ -39,14 +39,14 @@ const ugliest = {
 const ghostKilla = {
     namemusic : 'GHOSTKILLA',
     artista : '1nonly',
-    File : 'ghost_Killa',
+    File : 'ghost_killa.jpg',
     liked : false,
 };
 
 const corsaFreestyle = {
     namemusic : 'Corsa Freestyle',
     artista : 'Ryu, the Runner',
-    File : 'corsa_Freestyle',
+    File : 'corsa_freestyle.jpg',
     liked : false,
 };
 
@@ -61,7 +61,7 @@ let isPlaying = false;
 let isShuffled = false;
 let isLooping = false;
 
-const originalPlaylist =  JSON.parse(localStorage.getItem('playlisty')) ?? [snowUkulele, opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,];
+const originalPlaylist = JSON.parse(localStorage.getItem('playlist'))
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
@@ -91,10 +91,17 @@ function playDecisao(){
 }
 
 function loadingSong(){
-    cover.src = `covers/${sortedPlaylist[index].File}.jpg`;
+<<<<<<< Updated upstream:player/script.js
+    cover.src = `/covers/${sortedPlaylist[index].File}.jpg`;
     namemusic.innerText = sortedPlaylist[index].namemusic;
     artista.innerText = sortedPlaylist[index].artista;
-    song.src = `songs/${sortedPlaylist[index].File}.mp3`;
+    song.src = `/songs/${sortedPlaylist[index].File}.mp3`;
+=======
+    cover.src = `/interface/covers/${sortedPlaylist[index].coverFile}`;
+    songName.innerText = sortedPlaylist[index].songName;
+    artista.innerText = sortedPlaylist[index].artista;
+    song.src = `/interface/songs/${sortedPlaylist[index].songFile}`;
+>>>>>>> Stashed changes:interface/player/script.js
     likeButtonRender();
 }
 
@@ -216,7 +223,7 @@ function likeButtonClicked(){
         sortedPlaylist[index].liked = false;
     }
     likeButtonRender();
-    localStorage.setItem('playlisty', 
+    localStorage.setItem('playlist', 
     JSON.stringify(originalPlaylist)
     );
 }

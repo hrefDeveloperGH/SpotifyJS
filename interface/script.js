@@ -4,6 +4,8 @@ const opium = {
     artista : 'Destroy Lonely',
     album: 'single',
     coverFile : 'opium_friday.jpg',
+    songFile : 'opium_friday.mp3',
+    liked : false,
 };
 
 const ugliest = {
@@ -12,6 +14,8 @@ const ugliest = {
     artista : '$UICIDEBOY$',
     album : 'Long Term Effects of Suffering',
     coverFile : 'ugliest.jpg',
+    songFile :  'ugliest.mp3',
+    liked : false,
 };
 
 const ghostKilla = {
@@ -20,6 +24,8 @@ const ghostKilla = {
     artista : '1nonly', 
     album : 'single',
     coverFile : 'ghost_killa.jpg',
+    songFile : 'ghost_killa.mp3',
+    liked : false,
 };
 
 const corsaFreestyle = {
@@ -28,6 +34,8 @@ const corsaFreestyle = {
     artista : 'Ryu, the Runner',
     album : 'Essa é a Vida de um Corredor',
     coverFile : 'corsa_freestyle.jpg',
+    songFile :  'corsa_freestyle.mp3',
+    liked : false,
 };
 
 const sempreTravado = {
@@ -36,6 +44,8 @@ const sempreTravado = {
     artista : 'DEREK',
     album: 'single',
     coverFile : 'sempre_travado.jpg',
+    songFile :  'sempre_travado.mp3',
+    liked : false,
 };
 
 const musicBiblioteca = [
@@ -48,7 +58,7 @@ const musicBiblioteca = [
 
 let songs = [...musicBiblioteca];
 
-let playlist = JSON.parse(localStorage.getItem('playlist')) ??[opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,]
+let playlist = JSON.parse(localStorage.getItem('playlist')) || [opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado];
 
 const pageBody = document.getElementById('corpinho');
 const searchTerm = document.getElementById('search-term');
@@ -143,7 +153,7 @@ function updateLocalStorage(){
 }
 
 function startPlayer(){
-    location.href = 'SpotifyJS'
+    location.href = 'SPOTIFY INSANE'
 }
 
 searchBt.addEventListener('click', searchClick);
