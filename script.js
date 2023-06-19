@@ -53,7 +53,7 @@ let isPlaying = false;
 let isShuffled = false;
 let isLooping = false;
 
-const originalPlaylist =  JSON.parse(localStorage.getItem('playlist')) ?? [opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado];
+const originalPlaylist =  JSON.parse(localStorage.getItem('playlist')) ?? [snowUkulele, opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
