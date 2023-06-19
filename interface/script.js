@@ -153,7 +153,7 @@ function updateLocalStorage(){
 }
 
 function startPlayer(){
-    location.href = '/interface/player'
+    location.href = '/interface/player/'
 }
 
 searchBt.addEventListener('click', searchClick);
