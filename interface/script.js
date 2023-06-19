@@ -58,7 +58,7 @@ const musicBiblioteca = [
 
 let songs = [...musicBiblioteca];
 
-let playlist = JSON.parse(localStorage.getItem('playlist')) || [opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado];
+let playlist = [opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado];
 
 const pageBody = document.getElementById('corpinho');
 const searchTerm = document.getElementById('search-term');
