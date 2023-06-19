@@ -117,3 +117,25 @@ body {
     margin-top: 0.5em;
 }
 
+#diambaone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#diamba {
+    display: flex;
+    justify-content: center;
+    background: #1ed760;
+    border-radius: 10px;
+    padding: 1%;
+    width: 15%;
+}
+
+#vtnc {
+    display: block;
+    color: black;
+    font-size: small;
+    padding: 1%;
+    width: 100%;
+}
