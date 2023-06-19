@@ -14,6 +14,14 @@ const loop = document.getElementById('repeat');
 const songTime = document.getElementById('song-time');
 const totalTime = document.getElementById('total-time');
 
+const snowUkulele = {
+    namemusic : 'i wrote this song 4 u',
+    artista : 'Snow',
+    File : 'snow_linda',
+    liked : false,
+};
+
+
 const opium = {
     namemusic : 'if looks could kill',
     artista : 'Destroy Lonely',
@@ -53,7 +61,7 @@ let isPlaying = false;
 let isShuffled = false;
 let isLooping = false;
 
-const originalPlaylist =  JSON.parse(localStorage.getItem('playlist')) ?? [snowUkulele, opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,];
+const originalPlaylist =  JSON.parse(localStorage.getItem('playlisty')) ?? [snowUkulele, opium, ugliest, ghostKilla, corsaFreestyle, sempreTravado,];
 let sortedPlaylist = [...originalPlaylist];
 let index = 0;
 
@@ -208,7 +216,7 @@ function likeButtonClicked(){
         sortedPlaylist[index].liked = false;
     }
     likeButtonRender();
-    localStorage.setItem('playlist', 
+    localStorage.setItem('playlisty', 
     JSON.stringify(originalPlaylist)
     );
 }
